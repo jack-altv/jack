@@ -4,7 +4,6 @@ import { exec } from "child_process";
 import readline from "readline";
 
 const argv = process.argv.slice(2);
-console.log("Hello there");
 
 exec(`bun run jack.js ${argv.join(' ')}`, (error, stdout, stderr) => {
     if (error) {
@@ -40,7 +39,7 @@ function startBunDownload() {
                 console.error(err.message)
             }
             if (stderr){
-                console.error('failed to download `bun` runtime')
+                console.log('failed to download `bun` runtime')
                 console.log(stderr)
             }
             console.log(stdout)
