@@ -1,0 +1,28 @@
+{
+  "name": "jack-altv",
+  "version": "0.0.11",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jack-altv/jack.git"
+  },
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "bin": {
+    "jack": "./run.js"
+  },
+  "description": "tool for alt:v server",
+  "homepage": "https://github.com/jack-altv/jack",
+  "keywords": ["altv", "gta5"],
+  "license": "MIT",
+  "scripts": {
+    "jack": "bun run jack.js",
+    "compile": "bun build --compile ./index.ts --outfile main",
+    "compile-jack": "bun build --compile ./jack.js --outFile jack"
+  },
+  "type": "module"
+}
