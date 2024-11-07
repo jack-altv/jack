@@ -13,8 +13,8 @@ exec(`bun run jack.js ${argv.join(' ')}`, (error, stdout, stderr) => {
         }
         return;
     }
-    if (stderr) 
-        console.error(`Error occured: ${stderr}`);{
+    if (stderr){ 
+        console.error(`Error occured: ${stderr}`);
     }
     console.log(stdout);
 })
@@ -37,9 +37,9 @@ function startBunDownload() {
         exec(command, (err, stdout, stderr) => {
             if (err) {
                 console.error(err.message)
+                console.log('failed to download `bun` runtime')
             }
             if (stderr){
-                console.log('failed to download `bun` runtime')
                 console.log(stderr)
             }
             console.log(stdout)

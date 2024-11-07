@@ -24,5 +24,8 @@
     "compile": "bun build --compile ./index.ts --outfile main",
     "compile-jack": "bun build --compile ./jack.js --outFile jack"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "bun": "^1.1.34"
+  }
 }
