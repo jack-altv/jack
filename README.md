@@ -1,15 +1,17 @@
 # jack
 
-To install dependencies:
+If you don't have `bun`, use your package manager of choice to install `jack` tool. Bun runtime will be asked for downloading to order to use `jack` tool.
+
+Install:
 
 ```bash
-bun install
+npm i -g jack-altv
 ```
 
-To run:
+Run:
 
 ```bash
-bun run index.ts
+jack
 ```
 
-This project was created using `bun init` in bun v1.1.33. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+This project was created using [Bun](https://bun.sh).

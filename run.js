@@ -2,13 +2,17 @@
 
 import { exec } from "child_process";
 import readline from "readline";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
 const argv = process.argv.slice(2);
+const file = fileURLToPath(import.meta.url);
+const dir = `${dirname(file)}${(process.platform == 'win32') ? '\\' : '/'}`
 
-exec(`bun run jack.js ${argv.join(' ')}`, (error, stdout, stderr) => {
+exec(`bun run ${dir}jack.js ${argv.join(' ')}`, (error, stdout, stderr) => {
     if (error) {
         console.error(error.message);
-        if ( !process.env.Path.includes(".bun") ) {
+        if ( !process.env.PATH.includes(".bun") ) {
             startBunDownload();
         }
         return;
